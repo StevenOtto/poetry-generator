@@ -11,9 +11,10 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   margin: 0;
+  color: ${({ theme }) => theme.colors.light};
 `;
 
 const Nav = styled.nav`
@@ -25,6 +26,7 @@ const NavLink = styled.a`
   color: ${({ theme }) => theme.colors.light};
   opacity: 0.9;
   transition: opacity 0.2s ease;
+  font-weight: 500;
   
   &:hover {
     opacity: 1;
@@ -35,10 +37,10 @@ const NavLink = styled.a`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>Weather Poetry</Logo>
+      <Logo>Poëzie Dagboek</Logo>
       <Nav>
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About</NavLink>
+        <NavLink href="/">Start</NavLink>
+        <NavLink href="/about">Over</NavLink>
       </Nav>
     </HeaderContainer>
   );

@@ -31,44 +31,44 @@ export default function About() {
   return (
     <Layout>
       <AboutContainer>
-        <Title>About Weather Poetry</Title>
+        <Title>Over Poëzie Dagboek</Title>
         
         <Section>
-          <SectionTitle>Our Mission</SectionTitle>
+          <SectionTitle>Onze Missie</SectionTitle>
           <Paragraph>
-            Weather Poetry brings together the natural world and artistic expression. 
-            We believe that weather evokes powerful emotions and imagery that can be 
-            beautifully captured through poetry.
+            Poëzie Dagboek brengt de natuurlijke wereld en artistieke expressie samen. 
+            Wij geloven dat weer krachtige emoties en beelden oproept die prachtig 
+            kunnen worden vastgelegd in poëzie.
           </Paragraph>
           <Paragraph>
-            Our AI poet is designed to create unique poems inspired by real-time 
-            weather conditions from any location in the world. Each poem is a unique 
-            reflection of the atmosphere, temperature, and conditions of a specific place.
+            Onze AI-dichter is ontworpen om unieke gedichten te creëren, geïnspireerd door 
+            real-time weersomstandigheden van elke locatie ter wereld. Elk gedicht is een 
+            unieke weerspiegeling van de atmosfeer, temperatuur en omstandigheden van een specifieke plaats.
           </Paragraph>
         </Section>
         
         <Section>
-          <SectionTitle>How It Works</SectionTitle>
+          <SectionTitle>Hoe Het Werkt</SectionTitle>
           <Paragraph>
-            When you enter a location, our system fetches current weather data for that 
-            place including temperature, humidity, wind conditions, and general weather state.
+            Wanneer je een locatie invoert, haalt ons systeem actuele weergegevens op voor die 
+            plaats, waaronder temperatuur, luchtvochtigheid, windomstandigheden en algemene weerstaat.
           </Paragraph>
           <Paragraph>
-            This information is then processed by our AI poetry agent, which creates a 
-            poem that embodies the essence of that weather. Sunny days might inspire 
-            bright, cheerful verses, while storms could evoke more dramatic and powerful lines.
+            Deze informatie wordt vervolgens verwerkt door onze AI-poëzie agent, die een 
+            gedicht creëert dat de essentie van dat weer belichaamt. Zonnige dagen kunnen 
+            heldere, vrolijke verzen inspireren, terwijl stormen meer dramatische en krachtige regels kunnen oproepen.
           </Paragraph>
           <Paragraph>
-            Each poem is completely unique, even for the same location over time, as weather 
-            conditions change.
+            Elk gedicht is volledig uniek, zelfs voor dezelfde locatie door de tijd heen, 
+            omdat weersomstandigheden veranderen.
           </Paragraph>
         </Section>
         
         <Section>
-          <SectionTitle>Contact Us</SectionTitle>
+          <SectionTitle>Neem Contact Op</SectionTitle>
           <Paragraph>
-            Have questions, suggestions, or feedback? We'd love to hear from you! 
-            Contact us at poetry@weatherpoetry.com.
+            Heb je vragen, suggesties of feedback? We horen graag van je! 
+            Neem contact met ons op via poezie@poeziedagboek.nl.
           </Paragraph>
         </Section>
       </AboutContainer>

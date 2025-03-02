@@ -5,7 +5,7 @@ const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   padding: ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.light};
   margin-top: auto;
 `;
@@ -18,7 +18,7 @@ const FooterText = styled.p`
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterText>© {new Date().getFullYear()} Weather Poetry. All rights reserved.</FooterText>
+      <FooterText>© {new Date().getFullYear()} Poëzie Dagboek. Alle rechten voorbehouden.</FooterText>
     </FooterContainer>
   );
 };

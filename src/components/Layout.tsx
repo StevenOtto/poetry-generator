@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Header from './Header';
-import Footer from './Footer';
-import { ReactNode } from 'react';
+import styled from "styled-components";
+import Header from "./Header";
+import Footer from "./Footer";
+import { ReactNode } from "react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ const LayoutContainer = styled.div`
 const Main = styled.main`
   flex: 1;
   padding: ${({ theme }) => theme.spacing.xl};
-  
+
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: ${({ theme }) => theme.spacing.md};
   }
@@ -25,9 +25,9 @@ const Main = styled.main`
 const Layout = ({ children }: LayoutProps) => {
   return (
     <LayoutContainer>
-      <Header />
+      {/* <Header /> */}
       <Main>{children}</Main>
-      <Footer />
+      {/* <Footer /> */}
     </LayoutContainer>
   );
 };

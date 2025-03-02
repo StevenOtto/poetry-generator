@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import styled from 'styled-components';
+import { useState } from "react";
+import styled from "styled-components";
 
 interface SearchFormProps {
   onSubmit: (location: string) => void;
@@ -10,9 +10,9 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
-  
+
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: row;
   }
@@ -20,11 +20,19 @@ const Form = styled.form`
 
 const Input = styled.input`
   padding: ${({ theme }) => theme.spacing.md};
-  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  border: 2px solid ${({ theme }) => theme.colors.secondary};
   border-radius: ${({ theme }) => theme.borderRadius.sm};
   font-size: 1rem;
   flex: 1;
-  
+  min-width: 420px;
+  background-color: ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.secondary};
+  font-family: ${({ theme }) => theme.fonts.main};
+
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.secondary}90;
+  }
+
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.colors.primary};
@@ -38,12 +46,14 @@ const Button = styled.button`
   color: ${({ theme }) => theme.colors.light};
   border-radius: ${({ theme }) => theme.borderRadius.sm};
   font-size: 1rem;
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  font-weight: 500;
   transition: background-color 0.2s ease;
-  
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary};
   }
-  
+
   &:disabled {
     background-color: ${({ theme }) => theme.colors.secondary};
     opacity: 0.7;
@@ -52,7 +62,7 @@ const Button = styled.button`
 `;
 
 const SearchForm = ({ onSubmit, isLoading }: SearchFormProps) => {
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,13 +75,13 @@ const SearchForm = ({ onSubmit, isLoading }: SearchFormProps) => {
     <Form onSubmit={handleSubmit}>
       <Input
         type="text"
-        placeholder="Enter a location (e.g., Paris, Tokyo, New York)"
+        placeholder="Voer een locatie in (bijv. Amsterdam, Parijs, Tokyo)"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         disabled={isLoading}
       />
       <Button type="submit" disabled={isLoading || !location.trim()}>
-        {isLoading ? 'Creating poem...' : 'Generate Poem'}
+        {isLoading ? "Bezig..." : "Genereer gedicht"}
       </Button>
     </Form>
   );
