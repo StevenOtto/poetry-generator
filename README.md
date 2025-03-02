@@ -25,12 +25,14 @@ A Next.js application that uses AI to generate poems inspired by the current wea
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/weather-poetry.git
 cd weather-poetry
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 # or
@@ -38,6 +40,7 @@ yarn install
 ```
 
 3. Start the development server
+
 ```bash
 npm run dev
 # or
@@ -61,7 +64,7 @@ yarn dev
 ## Usage
 
 1. Enter a location in the search bar (e.g., "Paris", "Tokyo", "New York")
-2. Click "Generate Poem" 
+2. Click "Generate Poem"
 3. View the AI-generated poem inspired by the current weather in that location
 
 ## License

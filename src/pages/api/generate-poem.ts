@@ -35,7 +35,7 @@ export default async function handler(
     const mastra = getMastra();
     const poetryAgent = mastra.getAgent("poetryAgent");
     const response = await poetryAgent.generate(
-      `Creeer een gedicht voor de locatie ${location} met tijdstip ${new Date().toLocaleTimeString()}`
+      `Creeer een gedicht voor de locatie ${location} met tijdstip ${new Date().toLocaleTimeString()} op de datum ${new Date().toLocaleDateString()}`
     );
 
     // Get the weather data from the response

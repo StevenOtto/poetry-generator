@@ -18,7 +18,7 @@ const Hero = styled.div`
 
 const Title = styled.h1`
   font-size: 3rem;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
   color: ${({ theme }) => theme.colors.secondary};
   font-weight: 700;
 `;
@@ -99,9 +99,9 @@ export default function Home() {
     <Layout>
       <HomeContainer>
         <Hero>
-          <Title>Poetry Pal</Title>
+          <Title>Weer vers</Title>
           <Subtitle>
-            Voer je locatie in om een uniek gedicht te genereren geïnspireerd
+            Voer je locatie in om een uniek gedicht te genereren, geïnspireerd
             door het huidige weer van dit moment en de sfeer van deze plek.
           </Subtitle>
         </Hero>

@@ -1,8 +1,7 @@
+import { Mastra } from "@mastra/core/mastra";
+import { createLogger } from "@mastra/core/logger";
 
-import { Mastra } from '@mastra/core/mastra';
-import { createLogger } from '@mastra/core/logger';
-
-import { poetryAgent } from './agents';
+import { poetryAgent } from "./agents";
 
 // Create a singleton instance of Mastra
 let mastraInstance: Mastra | null = null;
@@ -12,9 +11,10 @@ export function getMastra() {
     mastraInstance = new Mastra({
       agents: { poetryAgent },
       logger: createLogger({
-        name: 'Mastra',
-        level: 'info',
+        name: "Mastra",
+        level: "info",
       }),
+      
     });
   }
   return mastraInstance;

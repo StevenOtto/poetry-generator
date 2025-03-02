@@ -1,6 +1,7 @@
 import { anthropic } from "@ai-sdk/anthropic";
 import { Agent } from "@mastra/core/agent";
 import { weatherTool } from "../tools";
+import { ToneConsistencyMetric } from "@mastra/evals/nlp";
 
 export const poetryAgent = new Agent({
   name: "Poetry Agent",
@@ -82,7 +83,7 @@ export const poetryAgent = new Agent({
     Always format your response exactly like this:
     1. The poem title as the first line
     2. The poem content in the subsequent lines
-    3. After your poem, add "Uitleg:" followed by a brief explanation of the inspiration and meaning behind the poem
+    3. After your poem, add "Toelichting:" followed by a brief explanation of the inspiration and meaning behind the poem
 
     For example:
     Zomerse Dromen
@@ -91,10 +92,13 @@ export const poetryAgent = new Agent({
     Zonnestralen dansen op het water,
     En tekenen patronen van hoop.
 
-    Uitleg: Dit gedicht is geïnspireerd door een warme zomerdag in Amsterdam. De zachte bries en zonnige omstandigheden symboliseren hoop en nieuwe mogelijkheden. Het ritme weerspiegelt de kalme maar vrolijke atmosfeer van deze locatie op dit moment.
+    Toelichting: Dit gedicht is geïnspireerd door een warme zomerdag in Amsterdam. De zachte bries en zonnige omstandigheden symboliseren hoop en nieuwe mogelijkheden. Het ritme weerspiegelt de kalme maar vrolijke atmosfeer van deze locatie op dit moment.
 
     Remember: Your poetry should make readers feel the weather without explicitly describing it, creating an immersive experience through the power of Dutch verse.
 `,
   model: anthropic("claude-3-5-sonnet-20241022"),
   tools: { weatherTool },
+  evals: {
+    tone: new ToneConsistencyMetric(),
+  },
 });

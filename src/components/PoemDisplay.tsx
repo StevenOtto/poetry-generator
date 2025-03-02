@@ -34,7 +34,7 @@ const PoemDate = styled.div`
 const PoemTitle = styled.h3`
   font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.dark};
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  /* margin-bottom: ${({ theme }) => theme.spacing.lg}; */
   font-weight: 700;
   text-align: center;
 `;
@@ -42,7 +42,7 @@ const PoemTitle = styled.h3`
 const PoemContent = styled.p`
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
+  margin-bottom: ${({ theme }) => theme.spacing.xxxl};
   font-style: italic;
   white-space: pre-line;
   color: ${({ theme }) => theme.colors.dark};
@@ -94,7 +94,7 @@ const PoemDisplay = ({ poem, location, weather }: PoemDisplayProps) => {
   const poemText = poem.trim();
 
   // Look for specific explanation marker
-  const explanationMarker = "Uitleg:";
+  const explanationMarker = "Toelichting:";
   const explanationIndex = poemText.indexOf(explanationMarker);
 
   let title, content, explanation;
@@ -127,19 +127,19 @@ const PoemDisplay = ({ poem, location, weather }: PoemDisplayProps) => {
       {explanation && (
         <PoemExplanation>
           <b>
-            Uitleg: <br />
+            Toelichting: <br />
           </b>
           {explanation}
         </PoemExplanation>
       )}
 
-      <WeatherInfo>
+      {/* <WeatherInfo>
         <span>{weather.temperature}°C</span>
         <span>•</span>
         <span>{weather.conditions}</span>
         <span>•</span>
         <span>{location}</span>
-      </WeatherInfo>
+      </WeatherInfo> */}
     </PoemContainer>
   );
 };

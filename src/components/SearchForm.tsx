@@ -75,13 +75,13 @@ const SearchForm = ({ onSubmit, isLoading }: SearchFormProps) => {
     <Form onSubmit={handleSubmit}>
       <Input
         type="text"
-        placeholder="Voer een locatie in (bijv. Amsterdam, Parijs, Tokyo)"
+        placeholder="Voer een locatie in (bijv. Amsterdam, Parijs, Berlijn)"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         disabled={isLoading}
       />
       <Button type="submit" disabled={isLoading || !location.trim()}>
-        {isLoading ? "Bezig..." : "Genereer gedicht"}
+        {isLoading ? "Bezig..." : "Creeër gedicht"}
       </Button>
     </Form>
   );
