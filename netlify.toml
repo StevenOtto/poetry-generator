@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Mastra environment variables
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Needed for API routes to work properly with Mastra
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@ai-sdk/anthropic", "@mastra/core", "@mastra/evals"]
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+  framework = "nextjs"
