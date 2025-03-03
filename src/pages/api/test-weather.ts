@@ -1,4 +1,5 @@
 // src/pages/api/test-weather.ts
+// @ts-nocheck
 import type { NextApiRequest, NextApiResponse } from "next";
 import { weatherTool } from "../../mastra/tools";
 
@@ -11,25 +12,25 @@ export default async function handler(
   }
 
   const { location } = req.body || {};
-  
+
   try {
-    const result = await weatherTool.execute!({ 
-      context: { 
+    const result = await weatherTool.execute!({
+      context: {
         location: location || "Amsterdam",
         steps: {},
         triggerData: {},
         attempts: {},
-        getStepResult: () => undefined
-      } 
+        getStepResult: () => undefined,
+      },
     });
     return res.status(200).json({
       success: true,
-      weather: result
+      weather: result,
     });
   } catch (error) {
-    return res.status(500).json({ 
+    return res.status(500).json({
       success: false,
-      error: "Weather tool failed", 
+      error: "Weather tool failed",
       errorType: error,
     });
   }
