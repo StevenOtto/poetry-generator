@@ -15,8 +15,6 @@
 [functions]
   node_bundler = "esbuild"
   external_node_modules = ["@ai-sdk/anthropic", "@mastra/core", "@mastra/evals"]
-  timeout = 30
-  memory = 1024
 
 [dev]
   command = "npm run dev"
