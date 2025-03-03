@@ -34,6 +34,11 @@ export default async function handler(
   try {
     const mastra = getMastra();
     const poetryAgent = mastra.getAgent("poetryAgent");
+
+    if (!process.env.ANTHROPIC_API_KEY) {
+      throw new Error("ANTHROPIC_API_KEY is not set");
+    }
+
     const response = await poetryAgent.generate(
       `Creeer een gedicht voor de locatie ${location} met tijdstip ${new Date().toLocaleTimeString()} op de datum ${new Date().toLocaleDateString()}`
     );
