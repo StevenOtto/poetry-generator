@@ -7,3 +7,6 @@ dist
 .env.local
 *.db
 *.next
+
+# Local Netlify folder
+.netlify

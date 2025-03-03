@@ -18,5 +18,5 @@
 
 [dev]
   command = "npm run dev"
-  port = 3000
-  framework = "nextjs"
+  port = 3100
+  framework = "next"
