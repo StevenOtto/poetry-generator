@@ -11,11 +11,6 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Needed for API routes to work properly with Mastra
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["@ai-sdk/anthropic", "@mastra/core", "@mastra/evals"]
-
 [dev]
   command = "npm run dev"
   port = 3100
